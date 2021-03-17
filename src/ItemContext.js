@@ -1,6 +1,4 @@
 import React, { useState, createContext } from 'react';
-import { v1 as uuidv1 } from 'uuid';
-// export const ItemContext = createContext();
 
 export const ItemContext = createContext({
   items: [],
@@ -8,28 +6,10 @@ export const ItemContext = createContext({
   deleteItem: () => {}
 });
 
-const initialState = [
-  {
-    name: "Red Beans",
-    amount: 23,
-    id: uuidv1()
-  },
-  {
-    name: "Nuts for Bunnies",
-    amount: 33,
-    id: uuidv1()
-  },
-  {
-    name: "Chopped Tomatoes",
-    amount: 2,
-    id: uuidv1() 
-  }
-];
-
 export const ItemProvider = (props) => {
-  const [items, setItems] = useState(initialState);
+  const [items, setItems] = useState([]);
   const addItem = (item) => setItems((items) => [...items, item]);
-
+  
   const deleteItem = (id) => setItems((items) => items.filter((item) => item.id !== id));
 
   const value = {

@@ -1,10 +1,17 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState, useEffect } from 'react';
 import Item from './Item';
 import { ItemContext } from './ItemContext';
+import axios from '../src/axios-items';
 
 const ItemsList = () => {
-  const { items } = useContext(ItemContext);
-  
+  const [items, setItems] = useState(useContext(ItemContext).items);
+  useEffect(() => {
+    axios.get('/items.json')
+        .then(resp => {
+                      const receivedItems = Object.values(resp.data);
+                      setItems(receivedItems)})
+        .catch(error => console.log(error));
+  }, []);
   return (
     <div className="items-list">
       {items.map(item => (
@@ -16,7 +23,7 @@ const ItemsList = () => {
         />
       ))}
     </div> 
-   );
+  );
 };
  
 export default ItemsList;

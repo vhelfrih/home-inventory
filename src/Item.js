@@ -3,7 +3,7 @@ import { ItemContext } from './ItemContext';
 
 const Item = ({name, amount, id }) => {
   const { deleteItem } = useContext(ItemContext);
-
+  
   return (
     <div>
       <h3>{name}</h3>
