@@ -91,6 +91,9 @@ button {
   justify-content: center;
   padding: 8px;
   margin: 0;
+  opacity: 0.95;
+  color: #1f6479;
+  background-color: #ccc;
   border: 1px solid #ccc;
   border-radius: 4px;
   box-shadow: 1px 1px 1px 1px rgba(131, 131, 170, 0.4);
@@ -100,6 +103,9 @@ button {
 
 button:hover {
   background-color: #ccc;
+}
+button:focus, select:focus {
+  outline: none;  
 }
 
 .btn-group {
@@ -124,38 +130,28 @@ button:hover {
   align-items: center;
 }
 
-.items-list-container{
-  margin: 6px auto;
-  display: flex;
-  width: 40em;
-  align-items: center;
-}
-
-.items-list {
+.items-list{
   background-color: #ccc;
   color: #1f6479;
   display: flex;
-  opacity: 0.9;
+  opacity: 0.95;
   padding: 8px;
   border-radius: 6px;
-  justify-content: center;
+  justify-content:space-between;
   align-items: center;
   margin: 1rem auto;
-  width: 80%;
+  width: 60%;
 }
 
 .items-list h4{
   padding: 0.2rem;
-  text-align: left;
-  width: 20rem;
   font-size: 1.2rem;
 }
 
 .items-list span{
-  padding: 8px;
-  margin-left: 4rem;
-  justify-content: center;
-  width: 7rem;
+  padding: 0.2rem;
+  background-color: rgb(219, 219, 217);
+  font-weight: 400;
   border: 1px solid #dedede;
   border-radius: 4px;
   box-shadow: 1px 1px 1px 1px rgba(131, 131, 170, 0.4);
@@ -173,24 +169,3 @@ button:hover {
   margin: 8rem auto;
   max-width: 80%;
 }
-
-/* header,
-section {
-  padding: 4rem 0;
-  @media (min-width: 40em) {
-    header,
-    section {
-      padding: 7rem 0;
-    }
-  }
-}
-
-.container {
-  margin-inline: auto;
-  width: min(90%, 70.5rem);
-}
-
-.split {
-  display: flex;
-  flex-direction: column;
-} */
