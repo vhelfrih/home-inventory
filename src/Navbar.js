@@ -7,9 +7,9 @@ const Navbar = () => {
       <h1>Household Inventory</h1>
         <div className="links">
           <nav>
-            <ul>
-            <Link to="/"><li><h1>Home</h1></li></Link>
-            <Link to="/low" style={{color: 'red', fontWeight: 'bold'}} ><li>Low on Stock</li></Link>
+            <ul style={{listStyle: 'none'}} >
+              <Link to="/"><li>Home</li></Link>
+              <Link to="/low"><li>Low on Stock</li></Link>
             </ul>
           </nav>
         </div>

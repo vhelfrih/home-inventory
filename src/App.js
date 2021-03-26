@@ -12,19 +12,17 @@ function App() {
     <BrowserRouter>
       <ItemProvider>
         <div className="App">
-        <div className="content">
+        <div>
           <Navbar />
         </div>
           <Switch>
-            <Route path='/' render={props =>
+            <Route path='/' exact render={props =>
                 <>
                   <AddItem />
                   <ItemsList />
                 </>
                 } />
-          </Switch>
-          <Switch>
-            <Route path="/low" exact component={ LowStock } />
+            <Route path="/low" component={LowStock} />
           </Switch>
         </div>
       </ItemProvider>

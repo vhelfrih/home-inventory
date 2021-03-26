@@ -5,29 +5,31 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Roboto";
-  color: #333;
-  height: auto;
 }
 
-  body {
+body {
   background-color: #f7f7f7;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  min-height: 100vh;
+  background-image: url("./001.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-blend-mode: luminosity;
+  height: 100vh;
+  width: 100vw;
 }
 
 .navbar {
   padding: 10px;
   display: flex;
+  width: 100%;
   position: fixed;
   top: 0;
   left: 0;
   align-items: center;
-  width: 100vw;
-  margin: auto;
   border-bottom: 1px solid #f2f2f2;
   background-color: #1f6479;
+  z-index: 500;
 }
 
 .navbar h1 {
@@ -35,12 +37,15 @@
   font-weight: 300;
 }
 
-.navbar .links {
+.links {
+  margin-right: 1rem;
   margin-left: auto;
 }
 
 .navbar a {
   display: flex;
+  flex-direction: column;
+  text-align: right;
   text-decoration: none;
   padding: 6px;
   color: rgb(255, 255, 255);
@@ -48,30 +53,30 @@
 }
 
 .navbar a:hover {
-  color: blue;
-}
-
-.content {
-  width: 100%;
-  margin: 40px auto;
-  padding-top: 15%;
+  font-weight: bold;
+  transform: translateY(-4px);
 }
 
 .new-item {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  margin: 14px auto 12px;
+  align-items: center;
+  margin: 8rem auto 1rem;
+  max-width: 80%;
 }
 
-input {
+input, select, button {
   display: flex;
+  flex-grow:3;
   justify-content: space-between;
-  margin: 4px auto;
+  margin: 1rem auto;
   padding: 6px;
   border: 1px solid #ccc;
   border-radius: 3px;
   box-shadow: 1px 1px 1px 1px rgba(131, 131, 170, 0.4);
-  max-width: 8rem;
+  width: 6rem;
+  height: 2rem;
 }
 
 input:focus, textarea:focus {
@@ -82,38 +87,110 @@ input:focus, textarea:focus {
 
 button {
   display: flex;
-  justify-content: space-between;
-  margin: 4px auto;
+  text-align: center;
+  justify-content: center;
   padding: 8px;
+  margin: 0;
   border: 1px solid #ccc;
-  border-radius: 3px;
+  border-radius: 4px;
   box-shadow: 1px 1px 1px 1px rgba(131, 131, 170, 0.4);
   max-width: 8rem;
+  cursor: pointer;
 }
 
-.items-list h3{
-  margin: 6px auto;
-  font-size: 1.5rem;
-  font-weight: 400;
-  line-height: 1.2rem;
+button:hover {
+  background-color: #ccc;
+}
+
+.btn-group {
   display: flex;
-  flex-direction: row;
-  justify-content: center;
 }
-.items-list p{
+
+.delete-btn {
+  color: whitesmoke;
+  background-color: salmon;
+  font-size: 0.9rem;
+  width: 70px;
+  justify-content: center;
+  align-items: center;
+}
+
+.edit-btn {
+  color: whitesmoke;
+  background-color: rgb(53, 204, 53);
+  font-size: 0.9rem;
+  width: 70px;
+  justify-content: center;
+  align-items: center;
+}
+
+.items-list-container{
   margin: 6px auto;
-  font-size: 1.5rem;
-  font-weight: 300;
-  line-height: 1.2rem;
   display: flex;
-  flex-direction: row;
+  width: 40em;
+  align-items: center;
 }
-.items-preview{
-  font-size: 1rem;
-  font-weight: 100;
-  line-height: 1.8rem;
-  /* display: flex; */
-  /* flex-direction: row; */
-  margin-left: 2.6rem;
+
+.items-list {
+  background-color: #ccc;
+  color: #1f6479;
+  display: flex;
+  opacity: 0.9;
+  padding: 8px;
+  border-radius: 6px;
   justify-content: center;
+  align-items: center;
+  margin: 1rem auto;
+  width: 80%;
 }
+
+.items-list h4{
+  padding: 0.2rem;
+  text-align: left;
+  width: 20rem;
+  font-size: 1.2rem;
+}
+
+.items-list span{
+  padding: 8px;
+  margin-left: 4rem;
+  justify-content: center;
+  width: 7rem;
+  border: 1px solid #dedede;
+  border-radius: 4px;
+  box-shadow: 1px 1px 1px 1px rgba(131, 131, 170, 0.4);
+}
+
+.lowstock {
+  background-color: #ccc;
+  color: #1f6479;
+  display: flex;
+  opacity: 0.9;
+  padding: 8px;
+  border-radius: 6px;
+  justify-content: center;
+  align-items: center;
+  margin: 8rem auto;
+  max-width: 80%;
+}
+
+/* header,
+section {
+  padding: 4rem 0;
+  @media (min-width: 40em) {
+    header,
+    section {
+      padding: 7rem 0;
+    }
+  }
+}
+
+.container {
+  margin-inline: auto;
+  width: min(90%, 70.5rem);
+}
+
+.split {
+  display: flex;
+  flex-direction: column;
+} */
