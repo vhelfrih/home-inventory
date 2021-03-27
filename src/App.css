@@ -35,6 +35,7 @@ body {
 .navbar h1 {
   color: rgb(255, 255, 255);
   font-weight: 300;
+  flex-direction: column;
 }
 
 .links {
@@ -60,18 +61,25 @@ body {
 .new-item {
   display: flex;
   flex-wrap: wrap;
+  
+  /* position: fixed;
+  top: 0;
+  left: 0;
+  right: 0; */
+
   justify-content: center;
   align-items: center;
-  margin: 8rem auto 1rem;
+  margin: 6rem auto 1rem;
   max-width: 80%;
+  z-index: 200;
 }
 
+
 input, select, button {
-  display: flex;
-  flex-grow:3;
-  justify-content: space-between;
-  margin: 1rem auto;
+  flex: 1 1 33%;
+  flex-wrap: wrap;
   padding: 6px;
+  margin: 4px;
   border: 1px solid #ccc;
   border-radius: 3px;
   box-shadow: 1px 1px 1px 1px rgba(131, 131, 170, 0.4);
@@ -86,7 +94,6 @@ input:focus, textarea:focus {
 }
 
 button {
-  display: flex;
   text-align: center;
   justify-content: center;
   padding: 8px;
@@ -108,28 +115,6 @@ button:focus, select:focus {
   outline: none;  
 }
 
-.btn-group {
-  display: flex;
-}
-
-.delete-btn {
-  color: whitesmoke;
-  background-color: salmon;
-  font-size: 0.9rem;
-  width: 70px;
-  justify-content: center;
-  align-items: center;
-}
-
-.edit-btn {
-  color: whitesmoke;
-  background-color: rgb(53, 204, 53);
-  font-size: 0.9rem;
-  width: 70px;
-  justify-content: center;
-  align-items: center;
-}
-
 .items-list{
   background-color: #ccc;
   color: #1f6479;
@@ -139,8 +124,8 @@ button:focus, select:focus {
   border-radius: 6px;
   justify-content:space-between;
   align-items: center;
-  margin: 1rem auto;
-  width: 60%;
+  margin: 12px auto;
+  width: 70%;
 }
 
 .items-list h4{
@@ -155,6 +140,33 @@ button:focus, select:focus {
   border: 1px solid #dedede;
   border-radius: 4px;
   box-shadow: 1px 1px 1px 1px rgba(131, 131, 170, 0.4);
+}
+
+.items-list, .btn-group > * {
+  flex: 1 1 10em;
+  flex-wrap: wrap;
+}
+
+.btn-group {
+  display: flex;
+}
+
+.delete-btn {
+  color: whitesmoke;
+  background-color: salmon;
+  font-size: 0.9rem;
+  width: 2.5rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.edit-btn {
+  color: whitesmoke;
+  background-color: rgb(53, 204, 53);
+  font-size: 0.9rem;
+  width: 2.5rem;
+  justify-content: center;
+  align-items: center;
 }
 
 .lowstock {

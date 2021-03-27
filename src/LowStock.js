@@ -23,7 +23,7 @@ const LowStock = () => {
       {items.map(item => {
         return (
           <div key={item.name} >
-            <h2 style={{margin: '20px', textAlign: 'center', color: 'red'}}>{item.amount < 5 ? `${item.name + " " + item.amount} ` : null}</h2>
+            <h2 style={{margin: '20px', textAlign: 'center', color: 'red'}}>{item.amount < 5 ? `${item.name + " " + item.amount + " " + item.place} ` : null}</h2>
           </div>
         )
       })}
