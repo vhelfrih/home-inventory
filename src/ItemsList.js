@@ -5,6 +5,7 @@ import axios from '../src/axios-items';
 
 const ItemsList = () => {
   const [items, setItems] = useState(useContext(ItemContext).items);
+  
   useEffect(() => {
     let mounted = true;
       axios.get('/items.json')
@@ -15,7 +16,7 @@ const ItemsList = () => {
           .catch(error => console.log(error));
 
     return () => {mounted = false};
-  }, [setItems]);
+  }, [items.name]);
  
   return (
     <div>

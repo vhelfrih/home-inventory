@@ -61,12 +61,6 @@ body {
 .new-item {
   display: flex;
   flex-wrap: wrap;
-  
-  /* position: fixed;
-  top: 0;
-  left: 0;
-  right: 0; */
-
   justify-content: center;
   align-items: center;
   margin: 6rem auto 1rem;
@@ -81,9 +75,11 @@ input, select, button {
   padding: 6px;
   margin: 4px;
   border: 1px solid #ccc;
-  border-radius: 3px;
+  border-radius: 2px;
   box-shadow: 1px 1px 1px 1px rgba(131, 131, 170, 0.4);
-  width: 6rem;
+  font-size: 14px;
+  text-transform: uppercase;
+  width: 100%;
   height: 2rem;
 }
 
@@ -97,6 +93,8 @@ button {
   text-align: center;
   justify-content: center;
   padding: 8px;
+  font-weight: 600;
+  letter-spacing: 3px;
   margin: 0;
   opacity: 0.95;
   color: #1f6479;
@@ -117,28 +115,28 @@ button:focus, select:focus {
 
 .items-list{
   background-color: #ccc;
-  color: #1f6479;
   display: flex;
   opacity: 0.95;
   padding: 8px;
-  border-radius: 6px;
-  justify-content:space-between;
+  border-radius: 2px;
+  justify-content: space-between;
   align-items: center;
   margin: 12px auto;
   width: 70%;
 }
 
-.items-list h4{
+.items-list h4, span {
+  color: rgba(0, 52, 95, 0.9);
   padding: 0.2rem;
   font-size: 1.2rem;
+  font-weight: 400;
+  text-transform: uppercase;
 }
 
 .items-list span{
-  padding: 0.2rem;
   background-color: rgb(219, 219, 217);
-  font-weight: 400;
   border: 1px solid #dedede;
-  border-radius: 4px;
+  border-radius: 2px;
   box-shadow: 1px 1px 1px 1px rgba(131, 131, 170, 0.4);
 }
 

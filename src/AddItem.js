@@ -40,9 +40,9 @@ const AddItem = () => {
 
   return ( 
       <form className="new-item" onSubmit={submitHandler}>
-        <input type="text" name="name" value={name} onChange={updateName} placeholder="Item..."/>
-        <input type="text" name="amount" value={amount} onChange={updateAmount} placeholder="Amount..."/>
-        <select onChange={updatePlace}>
+        <input type="text" name="name" value={name} onChange={updateName} placeholder="Name..." required/>
+        <input type="text" name="amount" value={amount} onChange={updateAmount} placeholder="Amount..." required/>
+        <select onChange={updatePlace} required>
           <option value="">Place...</option>
           <option value="basement">Basement</option>
           <option value="pantry">Pantry</option>

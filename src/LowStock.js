@@ -14,7 +14,7 @@ const LowStock = () => {
           .catch(error => console.log(error));
 
     return () => {mounted = false};
-  }, []);
+  }, [items.amount]);
 
   return (
     <div className="lowstock" >
