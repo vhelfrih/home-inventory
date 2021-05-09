@@ -12,6 +12,7 @@ export const ItemProvider = (props) => {
   const addItem = (item) => setItems((items) => [...items, item]);
   
   const deleteItem = (id) => {
+    // props.onDelete(id);//new try
     const newItems = items.filter((item) => item.id !== id);
     setItems(newItems)};
  

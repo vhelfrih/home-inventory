@@ -8,12 +8,7 @@
 }
 
 body {
-  background-color: #f7f7f7;
-  background-image: url("./001.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
+  background-color: rgb(10, 9, 9);
   background-blend-mode: luminosity;
   height: 100vh;
   width: 100vw;
@@ -60,6 +55,7 @@ body {
 
 .new-item {
   display: flex;
+  position: fixed;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
@@ -67,7 +63,6 @@ body {
   max-width: 80%;
   z-index: 200;
 }
-
 
 input, select, button {
   flex: 1 1 33%;
@@ -81,6 +76,7 @@ input, select, button {
   text-transform: uppercase;
   width: 100%;
   height: 2rem;
+  position: relative;
 }
 
 input:focus, textarea:focus {
@@ -113,34 +109,36 @@ button:focus, select:focus {
   outline: none;  
 }
 
-.items-list{
-  background-color: #ccc;
+.items-container{
+  position: absolute;
+  top: 12rem;
   display: flex;
-  opacity: 0.95;
-  padding: 8px;
-  border-radius: 2px;
+  flex-direction: column;
+  width: 100%;
+  height: 1rem;
+}
+
+.items {
+  color: rgba(0, 52, 95, 0.9);
   justify-content: space-between;
   align-items: center;
-  margin: 12px auto;
-  width: 70%;
+  background-color: #f3e95b;
+  border-radius: 2px;
+  display: inline-block;
+  margin: 2px 14px;
+  width: 100%;
+  padding-left: 1rem;
 }
 
-.items-list h4, span {
-  color: rgba(0, 52, 95, 0.9);
-  padding: 0.2rem;
-  font-size: 1.2rem;
-  font-weight: 400;
-  text-transform: uppercase;
-}
-
-.items-list span{
+.items span{
   background-color: rgb(219, 219, 217);
   border: 1px solid #dedede;
   border-radius: 2px;
+  padding: 2px;
   box-shadow: 1px 1px 1px 1px rgba(131, 131, 170, 0.4);
 }
 
-.items-list, .btn-group > * {
+.items, .btn-group > * {
   flex: 1 1 10em;
   flex-wrap: wrap;
 }
